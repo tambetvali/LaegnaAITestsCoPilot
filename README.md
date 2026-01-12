@@ -1,5 +1,7 @@
 # LaegnaAITestsCoPilot
 
+You can use [https://github.com/tambetvali/LaegnaAITestsCoPilot/blob/main/aiplatformideas.md](idea architecture document) to get inspiration: how to format your own LogSeq/Obsidian-like system. based on Python, Flask, etc. - here are my suggestions for lightweight environment, considering them to my own local scope of this arch. doc (also codenamed Laegna, because I have harmonized my common idea - to provide to others what I need, because I have my own body of information with the same name, but not prefix/suffix "AI" - this way, there is no other contradiction that this is also the architecture for some things developed there).
+
 ## LoPilot Popular Formar: Programming Language — How Modern Programming Actually Works with Copilot
 
 **This CoPilot's chapter mostly introduces everything important in my next chapter, as well as gives some insight.**
