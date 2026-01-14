@@ -557,35 +557,35 @@ You can ask CoPilot to generate a set of animations you can use.
 
 ## Animation Set
 Braille spinner:
-\`\`\`
+```
 ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏
-\`\`\`
+```
 
 Smooth bar:
-\`\`\`
+```
 ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
-\`\`\`
+```
 
 Expanding star:
-\`\`\`
+```
 ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿
-\`\`\`
+```
 
 ## Animation Set
 Braille spinner:
-\`\`\`
+```
 ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏
-\`\`\`
+```
 
 Smooth bar:
-\`\`\`
+```
 ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
-\`\`\`
+```
 
 Expanding star:
-\`\`\`
+```
 ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿
-\`\`\`
+```
 
 # ASCII, UTF‑8, and Why Text‑First Expression Still Matters
 
