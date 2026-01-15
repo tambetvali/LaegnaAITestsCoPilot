@@ -168,16 +168,16 @@ Choose a domain for the task. Each domain provides a different level of solution
    - Example: Social trends prediction  
    - Data is sparse or noisy; solutions are mostly heuristics.
 
-\`\`\`python
+```python
 # Example: Domain selection
 domain = "physics"  # "geography" or "social" also possible
-\`\`\`
+```
 
 ---
 
 ## 2️⃣ Python Environment Setup
 
-\`\`\`python
+```python
 # Core libraries
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -187,7 +187,7 @@ from sklearn.metrics import mean_squared_error
 import mistune         # Markdown processing if needed
 from anytree import Node, RenderTree  # For tree-structured organization
 from flask import Flask, jsonify       # Optional lightweight web interface
-\`\`\`
+```
 
 ---
 
@@ -198,7 +198,7 @@ We want a set of **ideal-like, simple expressions** typical of the domain:
 - Use domain libraries (`sympy` for math, `geopandas` for geography, etc.)
 - Automatically generate equations with unknowns.
 
-\`\`\`python
+```python
 from sympy import symbols, Eq, sin, cos
 
 # Example for physics: simple projectile motion
@@ -208,7 +208,7 @@ expressions = [
     Eq(v0, (2*h*g)**0.5),      # initial velocity from height
     Eq(t, (2*h/g)**0.5)        # time of flight
 ]
-\`\`\`
+```
 
 - Each expression may contain unknowns (e.g., `v0`, `t`, `h`)  
 - For other domains, replace physics formulas with appropriate domain rules.
@@ -220,11 +220,11 @@ expressions = [
 - Collect domain-specific input-output data.
 - Format as `X` (features) and `y` (target).
 
-\`\`\`python
+```python
 # Example synthetic data for height vs time
 X = np.array([[1], [2], [3], [4], [5]])  # time t
 y = np.array([4.9, 19.6, 44.1, 78.4, 122.5])  # height h, assuming g=9.8, v0=0
-\`\`\`
+```
 
 ---
 
@@ -232,7 +232,7 @@ y = np.array([4.9, 19.6, 44.1, 78.4, 122.5])  # height h, assuming g=9.8, v0=0
 
 - For each candidate equation, identify unknowns and fit them using regression.
 
-\`\`\`python
+```python
 best_solutions = []
 
 for expr in expressions:
@@ -244,7 +244,7 @@ for expr in expressions:
     pred = model.predict(X)
     loss = mean_squared_error(y, pred)
     best_solutions.append({'equation': expr, 'params': model.coef_, 'loss': loss})
-\`\`\`
+```
 
 ---
 
@@ -253,7 +253,7 @@ for expr in expressions:
 - Rank equations by **loss**, **gain**, and **general safety**.
 - Pick the **top 3 candidates**.
 
-\`\`\`python
+```python
 # Sort by lowest loss
 best_solutions.sort(key=lambda x: x['loss'])
 top3 = best_solutions[:3]
@@ -264,32 +264,32 @@ for i, sol in enumerate(top3, 1):
     print(f"Parameters: {sol['params']}")
     print(f"Loss: {sol['loss']}")
     print("-" * 30)
-\`\`\`
+```
 
 ---
 
 ## 7️⃣ Optional Enhancements
 
 1. **Tree visualization** of equation candidates:
-\`\`\`python
+```python
 root = Node("Equations")
 for i, sol in enumerate(top3):
     Node(f"Solution {i+1} Loss={sol['loss']:.3f}", parent=root)
 for pre, _, node in RenderTree(root):
     print(f"{pre}{node.name}")
-\`\`\`
+```
 
 2. **Markdown rendering** for reports:
-\`\`\`python
+```python
 markdown_renderer = mistune.create_markdown()
 report_md = f"# Top 3 Solutions\n"
 for i, sol in enumerate(top3, 1):
     report_md += f"## Solution {i}\nEquation: `{sol['equation']}`\nLoss: {sol['loss']:.3f}\n\n"
 html_report = markdown_renderer(report_md)
-\`\`\`
+```
 
 3. **Flask web interface** for interactive exploration:
-\`\`\`python
+```python
 app = Flask(__name__)
 
 @app.route('/solutions')
@@ -298,7 +298,7 @@ def get_solutions():
 
 if __name__ == '__main__':
     app.run(debug=True)
-\`\`\`
+```
 
 ---
 
