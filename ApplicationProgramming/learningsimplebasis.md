@@ -1,3 +1,5 @@
+**Notice: this is ChatGPT-generated article - indeed based on my explicit, clear definition, but with more examples.**
+
 # Three Paradigms of Artificial Intelligence
 
 Artificial Intelligence encompasses diverse methods that process information, learn patterns, and make decisions. Here, we describe three essential classes of AI systems, linking intuitive metaphors to their scientific functions.
