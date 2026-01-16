@@ -227,7 +227,7 @@ Logic systems:
 
 So these cards are like fire - they burn fast, leave us ashes, but we can use those ashes as kind of nutrions. The logic system builds the space, thinking and metathinking space - a rational coordinate system where the DL can creatively operate with human-made, insightful cards of patterns.
 
-### Air:
+### Air: the theorem prover system.
 
 Activity: Intuition \[not the material intuition, but intuition to see deep reality\]
 
