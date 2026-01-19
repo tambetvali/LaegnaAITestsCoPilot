@@ -1,5 +1,7 @@
 # External sources to learn about AI
 
+For books, I have this bookslist, which is not complete list I reviewed, but rather shorter list of important books: [DevBooks](https://github.com/tambetvali/LaeArve/tree/main/Books/DevBooks) - notice while I did not read all the books; I studied them, I did read similar books, and I made this list which vaguely covers all the topics as you can find them from free books.
+
 I used to read books and be happy for my introspection of creative mode; these days my Jungian personality type has adapted it's natural change of middle age, and indeed I am more sensibly extrovert in rather studying from video materials and involvement much more than observation.
 
 Who are like me, born or become rather sensory extroverts than intellectual introverts, indeed find the video study sources as interesting as books.
