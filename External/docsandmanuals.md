@@ -73,39 +73,39 @@ Useful for understanding how Prolog actually *thinks* when deriving combinations
 ### Facts
 Represent basic statements about your pages or concepts.
 
-\`\`\`
+```
 page(introduction).
 uses(introduction, markdown).
-\`\`\`
+```
 
 ### Relations
 Describe how items connect.
 
-\`\`\`
+```
 links_to(introduction, standard_manuals).
-\`\`\`
+```
 
 ### Rules (Implications)
 Define derived connections.
 
-\`\`\`
+```
 connected(X, Y) :- links_to(X, Y).
 connected(X, Y) :- links_to(X, Z), connected(Z, Y).
-\`\`\`
+```
 
 ### Functors (Structured Terms)
 Allow you to attach metadata or structure.
 
-\`\`\`
+```
 tagged(page(introduction), topic(documentation)).
-\`\`\`
+```
 
 ### Queries
 Ask the system to enumerate all valid combinations.
 
-\`\`\`
+```
 ?- connected(introduction, X).
-\`\`\`
+```
 
 ---
 
