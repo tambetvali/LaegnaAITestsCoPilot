@@ -29,7 +29,9 @@ Comparatively, one can also study:
 
 We can loosely relate Donald Knuth, classic author of books, and three essays of Eric S. Raymond; Guido van Rossum did not specifically shine with essays, but his code is self-explanatory.
 
-Paul Graham, Tim O’Reilly and Joel Spolsky are generally most influential and well-known essaysts, whose work inspires IT sector about practical, theoretical, and hands-on matters; people are interested in uniting people together and doing something interesting.
+Paul Graham, Tim O’Reilly and Joel Spolsky are generally most influential and well-known essaysts, whose work inspires IT sector about practical, theoretical, and hands-on matters; people are interested in uniting people together and doing something interesting. 
+
+In addition, I would mention [L.B.S. Raccoon](https://en.wikipedia.org/wiki/Chaos_model)'s Chaos Model of Development: less known, but absolutely a deep influence. This model sees unification of paradigms from unified principle.
 
 ***Below is the completion by CoPilot; I did not want it to finish *every* topic, but there is a temptation for a free will: sometimes it's cocksure about a good prospect or idea of representation, and I cannot deny it's a correct thing - I am kind of giving it a free will, where it often doubts about formats, or a particular guideline it does not "want" to break, because we actually win by giving others the free will and this is not only about some "ethics", the word does not have to sound painful, but an intermutual strategy for efficiency and success: intellect/", purpose and creativity/" => free will.***
 
