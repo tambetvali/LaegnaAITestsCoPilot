@@ -31,7 +31,7 @@ export function initApp() {
     },
 
     initialize: function () {
-      this.editor = createEditor('#editor', window.INITIAL_MARKDOWN)
+      this.editor = createEditor('#editor', window.INITIAL_HTML)
       this.localRender()
     },
 
@@ -50,7 +50,7 @@ export function initApp() {
 
       const payload = { html, markdown }
 
-      this.editor.commands.clearContent()
+      // this.editor.commands.clearContent()
 
       const self = this
 

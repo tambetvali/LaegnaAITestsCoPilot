@@ -22,7 +22,8 @@ def hello():
     print("Hello, world!")
 ```
 """
-    return render_template("index.html", example_markdown=example_markdown, formatter=formatter)
+    example_html = markdown_parser(example_markdown)
+    return render_template("index.html", example_html=example_html, formatter=formatter)
 
 @app.route("/parse", methods=["POST"])
 def parse():

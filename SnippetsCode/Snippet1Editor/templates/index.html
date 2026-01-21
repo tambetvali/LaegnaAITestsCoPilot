@@ -41,7 +41,7 @@
 </div>
 
 <script>
-    window.INITIAL_MARKDOWN = {{ example_markdown|tojson }};
+  window.INITIAL_HTML = `{{ example_html | safe }}`;
 </script>
 
 <!-- Load the bundled Vite output -->
