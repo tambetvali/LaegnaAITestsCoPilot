@@ -63,7 +63,7 @@ The AI must implement and maintain the following API surface and behaviours.
 
 ---
 
-# 0. Getting Started With ChatGPT or Copilot
+# Starting point: Getting Started With ChatGPT or Copilot
 
 This project is intentionally small, transparent, and AI‑friendly.  
 Whether you use a lightweight 3B model or a large model, the assistant can fully understand the codebase and help you extend it.  
