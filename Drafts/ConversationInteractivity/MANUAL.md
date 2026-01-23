@@ -458,7 +458,7 @@ The AI can highlight, scroll, update, or expand content; add new sections; or re
 
 ## 1. Ollama connector recap (what it does)
 
-This is the connector you already have (slightly corrected to use `name` instead of `model` in the list):
+This is the connector to Ollama client - if you install Ollama locally, you can test the app on small models:
 
 ```python
 import json
