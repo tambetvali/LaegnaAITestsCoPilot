@@ -38,3 +38,15 @@ for a in streamer():
     print(a, end="", flush=True)
 
 print()  # final newline
+
+question = "Who is the person who is sitting here?"
+
+print("Q:", question)
+print("A: ", end="", flush=True)
+
+streamer = streamer.ask(question)
+
+for a in streamer():
+    print(a, end="", flush=True)
+
+print()  # final newline

@@ -17,6 +17,13 @@
             "stream": true
         },
         {
+            "localname": "Run with LitGPT",
+            "provider": "litgpt",
+            "internalprovider": "litgpt",
+            "modelpath": "Qwen/Qwen2.5-0.5B",
+            "stream": false
+        },
+        {
             "localname": "Run with Anthropic Claude",
             "provider": "anthropic",
             "internalprovider": "claude",
