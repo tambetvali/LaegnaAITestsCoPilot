@@ -1,1 +1,0 @@
-[Nuts and Bolts folder](https://github.com/tambetvali/LaegnaAIExperiments/tree/main/NutsAndBolts/CLIGPTOOPChat.py), under CLIGPTOOPChat.py directory, now contains the runnable chat inference in some abstraction level; altough I do not put that kind of abstract code here.
