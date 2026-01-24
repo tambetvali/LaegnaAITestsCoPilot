@@ -7,13 +7,11 @@ import os
 def filename(namestring):
     # Start with the current directory and move up until the root directory is reached
     current_dir = os.getcwd()
-    print(current_dir)
     step_count = 0
     
     while True:
         # Check if the "modelselector.py" file exists in the current directory
         if os.path.exists(os.path.join(current_dir, "modelselector.py")):
-            print(os.path.join(current_dir, "modelselector.py"))
             # If found, return the namestring prefixed with "../" based on the step count
             return '../' * step_count + namestring
         

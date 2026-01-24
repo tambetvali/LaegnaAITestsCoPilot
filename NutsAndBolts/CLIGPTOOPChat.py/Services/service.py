@@ -71,9 +71,16 @@ def initAIService(modelconf):
     if servicesrelative: from litellm_streamer import LitellmBasicStreamer
     else: from Services.litellm_streamer import LitellmBasicStreamer
 
+    # Use these models for fine-tuning
+    if servicesrelative: from litgpt_streamer import LitGPTBasicStreamer
+    else: from Services.litgpt_streamer import LitGPTBasicStreamer
+
     if modelconf["internalprovider"] == "ollama":
         environment = "ollama"
         return OllamaBasicStreamer(modelconf)
     elif modelconf["internalprovider"] == "litellm":
-        environment = "litllm"
+        environment = "litellm"
+        return LitellmBasicStreamer(modelconf)
+    elif modelconf["internalprovider"] == "litgpt":
+        environment = "litgpt"
         return LitellmBasicStreamer(modelconf)
