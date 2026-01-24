@@ -83,4 +83,4 @@ def initAIService(modelconf):
         return LitellmBasicStreamer(modelconf)
     elif modelconf["internalprovider"] == "litgpt":
         environment = "litgpt"
-        return LitellmBasicStreamer(modelconf)
+        return LitGPTBasicStreamer(modelconf)
