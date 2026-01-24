@@ -99,6 +99,14 @@ Here, we focus on **what tools exist** and **what tools the user can build**.
 - Backbone.js client logic  
 - Simple tool‑use patterns  
 
+### Multi‑model chat orchestration  
+- Unified chat interface (`AIService`)  
+- Backend‑specific streamers (Ollama, LiteLLM, LitGPT)  
+- Stateless and stateful conversation patterns  
+- Branching conversation trees  
+- Lazy streaming and caching  
+- Tool‑friendly, parallel‑friendly architecture  
+
 These are the **core building blocks**.
 
 ---
@@ -130,6 +138,13 @@ This folder is designed so users can easily build:
 - Tool‑use simulators  
 - Self‑training Q&A pipelines  
 - Multi‑model orchestration (Ollama, LitGPT)  
+
+### Chat and agent systems  
+- Stateless micro‑services for Q&A  
+- Linear or branching conversation engines  
+- Multi‑model orchestration (Ollama + LitGPT + LiteLLM)  
+- Tool‑use pipelines  
+- Agent‑like behaviors with minimal code  
 
 The same ideas scale from **toy prototypes** to **enterprise‑grade systems**.
 
@@ -198,6 +213,25 @@ This folder shows how to build **user‑friendly interfaces** that still preserv
 
 ---
 
+## 📁 [CLIGPTOOPChat.py](CLIGPTOOPChat.py/)
+**Summary:**  
+Introduces a unified, object‑oriented chat architecture that works across multiple AI backends (Ollama, LiteLLM, LitGPT, and others).  
+This folder demonstrates how to build scalable, branching, tool‑friendly AI conversations using a minimal Python interface.
+
+Covers:
+
+- A backend‑agnostic `AIService` base class  
+- Streamers for different providers (Ollama, LiteLLM, LitGPT)  
+- Stateless Q&A (one input → one output)  
+- Linear conversations (each Q&A inherits from the previous)  
+- Fully branched conversation trees (forum‑style or agent‑style)  
+- Lazy evaluation and token‑by‑token streaming  
+- How to integrate tools and extensions in a stateless, parallel‑friendly way  
+
+This folder shows how to build modular, scalable AI chat systems without committing to a single provider or framework.
+
+---
+
 # 4. How These Tools Combine Into a Coherent Ecosystem
 
 The NutsAndBolts folder demonstrates how to combine:
@@ -226,6 +260,7 @@ Into a **single, coherent, minimalist AI environment**.
 8. **Backbone.js** binds UI to data.  
 9. **Training cards** turn everything into Q&A.  
 10. **RAG** makes everything searchable.  
+11. **Multi‑model chat orchestration** lets users build conversations, tools, and agents that run across different backends with a unified interface.
 
 This is the **minimalist AI workstation**.
 
