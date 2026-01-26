@@ -220,3 +220,48 @@ You need to look at Python's standard example:
 Having done this, each thread at each node is list which ends at that node, and the past elements can see projections to the current nows: which maps very close to
 their perspective to future, rather than it's own vision, so we can have evolution iterations to work back in comparative time.
 
+## Third item (create the event structure)
+
+### X and Y layers.
+
+Z layer: perspecive events. (optional, also not needed for paradigm: you can make it from more common terms)
+
+X layer: the local events. (necessary)
+
+Y layer: the global events. (optional, but less)
+
+Let's assume we initially have at least numbered Q&A cards in each node.
+
+Each Q&A card has Z layer, the perspective: seen from far future or rather now, or even by the past nodes in it's own projection, it can create local node of summaries
+of it's past and future: once the higher AI or subsequent moves have achieved this, it has "Z" layer, the smallest layer, which relates the context to local perspectives.
+We need this layer if we do local operations with that Q&A card, and while it's initially inside linear versioning to the future, it now has two-dimensional time and
+relates itself to future, it's reproductions and also the tensor effort/effect on finding out side-effect free, still "Oraculous" futures, which can produce errors and
+sucess to it's initial trials and it's reassumptions, and provide better relations on still existing past-future relations of time, gradually optimizing. This should be
+red in reliable, solid time relations which can show how the time-effectiveness grows and future is neglected in the future rather by an AI with this capability of
+reinforcement; where we can summarize the cardsets and provide better solutions to past problems.
+- Z layer is made by ordered phases, for example "ReflectOnPast", "ProcessNow", "ReflectOnReprojectedFuture". If it's the same object you initially used, the past
+  moment state has "identity" with this reflection, and you grow it in layers in time - identity-identity mapping is funny to be oriented in causalities and their
+  efficiency growth, as measured in how fast the future was affecting us in potentials and balanced ways.
+
+X layer (finity layer): it's made of ordered phases. If you assign your messages into ordered phases of X layer, you achieve simple local order: they come locally, ordered in this order.
+
+Z layer (infinity layer): the global ordering. For example, you can add your tool-world in first major category: while they share the same or ordered elements in X layer, they come both linearly; if they have different positions on Z layer: whole linear structure on X layer is created for first element "Tools", then tools differ from
+"Messages" on second position of Z - the infinity property why you can frame it that way, is now that while X layer might provide you with categories of things somehow ordered inside one card, on Z layer the same card comes again, with new Z index: if it's different from two, they are no way mixed, and they do not associate with local cards, but all the cards come in all the order twice, first there are tools from each card, then messages.
+
+You can use Anytree again, and your more custom messaging structure.
+
+You can also orient events for each particular Z, X point:
+- Things which come after previous elements (more optional)
+- Things which come before it's beginning.
+- Things which come after it's beginning.
+- Things at the same time, virtually in parallel, or in the same local chain of "interior".
+- Things before it's end.
+- Things after it's end.
+- Finally, things before the next element (as well, more optional)
+
+These dimensions can let you do this:
+- Create extensions and toolkits or tools, and once you associate one with a card:
+  - It inherits in parallel: for each new "ask" or rebranch of your card, also all the tools, extensions and toolkits have this branch,
+    and each runs their operations in aligned way with yours, but builds the same tree in parallel. Tool can be associated as singleton,
+    or it can create instances with different configurations of the same tool. You can use python functions or AI sessions as tools,
+    or even wait for emails of users if it's not real-time activity.
