@@ -56,12 +56,12 @@ project-root/
 │
 ├── chat.py
 ├── models_config.example.json
-├── add:models_config.json        ← generated or user-created
+├── models_config.json        ← add:generated or user-created
 ├── modelselector.py
 ├── ollamaautomodelsjsonconf.py
-├── add:model_select.json         ← created by modelselector.py
-├── add:ollama_models.json        ← created for Ollama model listing
-├── add:ollama_models_gen.json    ← created by ollamaautomodelsjsonconf.py
+├── model_select.json         ← add:created by modelselector.py
+├── ollama_models.json        ← add:created for Ollama model listing
+├── ollama_models_gen.json    ← add:created by ollamaautomodelsjsonconf.py
 │
 └── Services/
     ├── service.py
@@ -269,7 +269,7 @@ print()  # final newline
 
 ### 5.3 `modelselector.py`
 
-**Summary:** Curses‑based selector that writes `add:model_select.json`.
+**Summary:** Curses‑based selector that writes `model_select.json`.
 
 ```python
 # This is a simple command line client, which will pull the dependencies and run the model.
@@ -401,7 +401,7 @@ key) to navigate and select an item.
 
 ### 5.4 `ollamaautomodelsjsonconf.py`
 
-**Summary:** Generates `add:ollama_models_gen.json` from installed Ollama models.
+**Summary:** Generates `ollama_models_gen.json` from installed Ollama models.
 
 ```python
 # Ask ollama for it's full list of models: provide an example configuration file; if you want exactly
