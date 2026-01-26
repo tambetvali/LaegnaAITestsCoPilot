@@ -156,7 +156,7 @@ python Services/litgpt_streamer.py
 python chat.py
 ```
 
-If the backend supports history, the second answer will reference the first question.
+If the backend supports history and you give the model instance a right character, mission or behaviour (for example calling "commanded" of AIService, in beginning of chat.py on the initial AIService instance before asking a question, "commanded" with nature such as "You are a helpful assistant.", which should set the character of a model for this session and all inherit Q&A), the second answer will reference the first question.
 
 ---
 
