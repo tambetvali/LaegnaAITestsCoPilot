@@ -3,9 +3,10 @@
 This file defines the entire project structure so an AI or developer can reconstruct the project from scratch.  
 It includes: intent, installation, folder layout, workflow, and placeholders for all project files.
 
-To start CoPilot or ChatGPT session for discussing this project, please copy-paste the whole markdown (Code view)
-to that chat session as one block so that the AI does not have to scan the folder. The AI should be instantly
-capable to discuss the project and create a follow-up plan with you to merge it into your projects and ideas.
+To start CoPilot or ChatGPT session for discussing this project, please copy-paste the whole markdown of this
+file (Code view) to that chat session as one block so that the AI does not have to scan the folder. The AI
+should be instantly capable to discuss the project and create a follow-up plan with you to merge it into your
+projects and ideas.
 
 ---
 
