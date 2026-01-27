@@ -203,16 +203,10 @@ A clean example of integrating TipTap, Backbone, Vite, and Flask into a cohesive
 
 # End of DIAGRAMS.md
 
+---
+
 # 🧠📐 TipTap–Flask Markdown Workbench  
-## System Flow, Internals & Conceptual Model (with Diagrams)
-
-This section explains **how the entire system thinks and moves** — not just how it runs.
-
-It combines:
-- Execution flow
-- Framework internals (Flask, Backbone.js)
-- UI cognition (TipTap)
-- A *TikTok-style analogy* for understanding data flow & attention
+## System Flow, Internals & Conceptual Model (GitHub-safe Mermaid)
 
 ---
 
@@ -220,16 +214,16 @@ It combines:
 
 ```mermaid
 flowchart LR
-    User[User Types in TipTap]
-    TipTap[TipTap Editor<br/>ProseMirror State]
+    User[User Input]
+    TipTap[TipTap Editor]
     BB[Backbone View]
-    MD[HTML → Markdown<br/>Converter]
-    AJAX[AJAX POST /parse]
+    MD[HTML to Markdown]
+    AJAX[AJAX POST parse]
     Flask[Flask App]
-    Mistune[Mistune Markdown Parser]
-    Pygments[Pygments Highlighter]
+    Mistune[Markdown Parser]
+    Pygments[Syntax Highlighter]
     Response[JSON Response]
-    UI[Update UI Panes]
+    UI[UI Update]
 
     User --> TipTap
     TipTap --> BB
@@ -243,20 +237,15 @@ flowchart LR
     Response --> UI
 ```
 
-**Key insight**  
-This is a **round-trip cognitive loop**:
-- TipTap holds *semantic intent*
-- Markdown is the *canonical intermediate*
-- Flask is the *authoritative interpreter*
-
 ---
 
-## 2️⃣ Frontend Cognitive Stack (TipTap + Backbone.js)
+## 2️⃣ Frontend Cognitive Stack  
+### TipTap + Backbone.js
 
 ```mermaid
 flowchart TD
-    DOM[DOM]
-    Editor[TipTap Editor<br/>ProseMirror]
+    DOM[Browser DOM]
+    Editor[TipTap Editor]
     State[Document State Tree]
     BBView[Backbone View]
     Events[DOM Events]
@@ -269,151 +258,116 @@ flowchart TD
     BBView --> Render
 ```
 
-### Why Backbone.js still works beautifully here
+**Critical control point**
+```js
+events: {
+  'click #submit-button': 'onSubmit'
+}
+```
 
-Backbone acts as a **manual nervous system**:
-
-- It does **not virtualize the DOM**
-- It explicitly binds:
-  ```js
-  events: {
-    'click #submit-button': 'onSubmit'
-  }
-  ```
-- It coordinates *when* cognition happens
-
-💡 This makes the system **debuggable, observable, and teachable** — ideal for AI-assisted reconstruction.
+Backbone is acting as a **manual nervous system**, not a virtual DOM.
 
 ---
 
-## 3️⃣ Flask Internal Processing Pipeline
+## 3️⃣ Flask Parsing Pipeline
 
 ```mermaid
 sequenceDiagram
-    participant C as Client (Browser)
+    participant C as Browser
     participant F as Flask
     participant M as Mistune
     participant P as Pygments
 
-    C->>F: POST /parse {html, markdown}
-    F->>M: parse(markdown)
-    F->>P: highlight(markdown)
-    M-->>F: rendered HTML
+    C->>F: POST /parse
+    F->>M: parse markdown
+    F->>P: highlight markdown
+    M-->>F: rendered html
     P-->>F: highlighted markdown
-    F-->>C: JSON {html, markdown, highlighted_markdown}
+    F-->>C: json response
 ```
 
-### Critical Flask lines (authority boundary)
-
+**Authority boundary**
 ```python
-markdown_parser = mistune.create_markdown()
-
 rendered_html = markdown_parser(markdown_text)
-
-highlighted_markdown = highlight(
-    markdown_text,
-    MarkdownLexer(),
-    formatter
-)
 ```
 
-🧠 **Interpretation**  
-Flask is not just a server — it is the **semantic judge**.  
-Frontend guesses; backend *decides*.
+Flask decides meaning.  
+Frontend only suggests.
 
 ---
 
-## 4️⃣ TipTap → Markdown Conversion (Lossy but Intent-Preserving)
+## 4️⃣ TipTap to Markdown Transformation
 
 ```mermaid
 flowchart LR
-    ProseMirror[ProseMirror JSON Tree]
-    HTML[Editor.getHTML()]
-    Regex[Regex Rules]
-    Markdown[Intermediate Markdown]
+    PM[ProseMirror State]
+    HTML[Editor HTML]
+    Rules[Regex Rules]
+    Markdown[Markdown Text]
 
-    ProseMirror --> HTML
-    HTML --> Regex
-    Regex --> Markdown
+    PM --> HTML
+    HTML --> Rules
+    Rules --> Markdown
 ```
 
-### Critical conversion line
-
+**Critical line**
 ```js
-const html = this.editor.getHTML()
-const markdown = htmlToMarkdown(html)
+const markdown = htmlToMarkdown(this.editor.getHTML())
 ```
 
-⚠️ This conversion is **intentionally simple**:
-- Not a full AST transform
-- Designed for *clarity over completeness*
-- Ideal for inspection, learning, and extension
+This step is:
+- intentionally lossy
+- transparent
+- debuggable
 
 ---
 
-## 5️⃣ TikTok Analogy (Why This Architecture Works)
+## 5️⃣ TikTok Analogy  
+### Attention and Interpretation Flow
 
 ```mermaid
 flowchart TB
-    Creator[User / Creator]
-    Draft[Draft Video<br/>(TipTap State)]
-    Caption[Caption Text<br/>(Markdown)]
-    Algorithm[TikTok Algorithm<br/>(Flask Parser)]
-    Feed[Rendered Feed<br/>(HTML Output)]
+    Creator[Creator]
+    Draft[Draft Content]
+    Caption[Text Metadata]
+    Algo[Interpretation Engine]
+    Feed[Rendered Feed]
 
     Creator --> Draft
     Draft --> Caption
-    Caption --> Algorithm
-    Algorithm --> Feed
+    Caption --> Algo
+    Algo --> Feed
 ```
 
-**Mapping**:
-- TipTap = recording studio
-- Markdown = captions + metadata
-- Flask = recommendation algorithm
-- Rendered HTML = what the world sees
+**Mapping**
+- TipTap = Draft content
+- Markdown = Caption text
+- Flask = Interpretation engine
+- HTML = Feed output
 
-🎯 TikTok works because:
-- Drafts are editable
-- Interpretation is centralized
-- Output is consistent
-
-So does this system.
+Same logic, different domain.
 
 ---
 
-## 6️⃣ System Philosophy (Why This Is AI-Friendly)
-
-- **One canonical format** (Markdown)
-- **Explicit state transitions**
-- **No hidden magic**
-- **Rebuildable from text alone**
-
-This document itself can:
-- Recreate the filesystem
-- Explain execution order
-- Train an AI on system intent
-
----
-
-## 🧩 Final Mental Model
+## 6️⃣ System Philosophy
 
 ```mermaid
 graph LR
     Intent[Human Intent]
     Structure[Structured Editing]
-    Text[Markdown Canon]
+    Canon[Markdown Canon]
     Meaning[Parsed Meaning]
-    Perception[Rendered View]
+    View[Rendered View]
 
     Intent --> Structure
-    Structure --> Text
-    Text --> Meaning
-    Meaning --> Perception
+    Structure --> Canon
+    Canon --> Meaning
+    Meaning --> View
 ```
 
-> *Markdown is not a format here — it is a **boundary of understanding***.
+> Markdown is not a format here —  
+> it is a **boundary of understanding**.
 
 ---
 
-**End of system diagrams & explanation**
+**End of GitHub-safe diagrams**
