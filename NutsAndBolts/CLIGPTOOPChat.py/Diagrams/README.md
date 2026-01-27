@@ -17,7 +17,7 @@ This chapter introduces the **core concepts**:
 ```mermaid
 flowchart TB
     QA["Q&A Instance"]
-    Tools["Tools & Extensions"]
+    Tools["Tools and Extensions"]
     Node["Anytree Node"]
     DB["MongoDB Storage"]
 
