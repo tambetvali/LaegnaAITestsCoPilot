@@ -1578,7 +1578,7 @@ You already have an Anki style deck file, for example:
 Each line is a JSON object:
 
 ```json
-{"question": "translate this to spanish", "answer": "this, in spanish, is: hola", "source_card_id": "67a1c9f8e3"}
+{"question": "translate this to spanish: hello", "answer": "this, in spanish, is: hola", "source_card_id": "67a1c9f8e3"}
 ```
 
 ### 1.1 Quick visual check
