@@ -1,3 +1,5 @@
+***This is ChatGPT implementation of GitHub-compatible Markdown document.***
+
 # Introduction — The Living Exponent of Our Time
 
 ✨ *This text introduces a shared practice, not a doctrine.*  
