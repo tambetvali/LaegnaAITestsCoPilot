@@ -1,6 +1,9 @@
 # Building *Snippet2MongoExplorer1Anytree*:  
 ## An Incremental Walkthrough with Stubs, Future‑Compatibility, and Architectural Diagrams
 
+***Regarding to it's name: this introduction builds the common real-time behaviour; how to implement it in MongoDB is shown and generic problems solved
+in snippet 2-1, the first specific section of this manual.***.
+
 This article documents the collaborative construction of **Snippet2MongoExplorer1Anytree**, a foundational component in a larger experimental system. The goal is to create a durable, database‑backed conversation engine that supports:
 
 - Streaming answers  
