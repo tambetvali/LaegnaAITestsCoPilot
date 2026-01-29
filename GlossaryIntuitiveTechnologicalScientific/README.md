@@ -1,3 +1,7 @@
+If you entered the chapter: click directly on "README.md" and use capable visualizer to see mermaid diagrams inside as vector-graphical technical drawings of relations,
+rather than code blocks or undrenderable items - the base view has this bias, but I am contemplating whether to rename and point them or to follow general logic and
+expect some issues or general resolutions, like what is the known pattern at some point of time.
+
 # 🌈 **Evolution of Language Across 10 Roles**  
 ### *How human perspectives shape linguistic style, logic, and AI resonance*  
 *(UTF‑8 icons, symbolic energy, Mermaid diagrams, and role‑based language evolution)*
