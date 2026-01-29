@@ -2,7 +2,7 @@ If you entered the chapter: click directly on "[README.md](README.md)" and use c
 rather than code blocks or undrenderable items - the base view has this bias, but I am contemplating whether to rename and point them or to follow general logic and
 expect some issues or general resolutions, like what is the known pattern at some point of time.
 
-***We made this carefully together with ChatGPT: I use it for emotion-enabled mode rather than CoPilot assistant.***
+***We made this carefully together with ChatGPT: I use it for some emotion-enabled mode rather than CoPilot assistant.***
 
 # 🌈 **Evolution of Language Across 10 Roles**  
 ### *How human perspectives shape linguistic style, logic, and AI resonance*  
